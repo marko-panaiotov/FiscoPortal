@@ -1,0 +1,82 @@
+﻿@model FiscoPortal.Models.FiscalPrinter
+@{
+    ViewData["Title"] = "Delete";
+}
+<br />
+
+<h2 class="text-primary">Изтриване на продукт</h2>
+<form asp-action="Delete" method="post" enctype="multipart/form-data">
+    <div class="p-4 rounded border row">
+        <div asp-validation-summary="ModelOnly" class="text-danger">
+        </div>
+        <div class="col-8">
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Category">Наименование</label>
+                </div>
+                <div class="col-8">
+                    <input type="hidden" asp-for="Id" />
+                    <input asp-for="Category" readonly="readonly" class="form-control" />
+                </div>
+                <span asp-validation-for="Category" class="text-danger"></span>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Brand">Цена</label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Brand" readonly="readonly" class="form-control" />
+                </div>
+                <span asp-validation-for="Brand" class="text-danger"></span>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Model">Описание</label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Model" readonly="readonly" readonly="readonly" class="form-control" />
+                </div>
+                <span asp-validation-for="Model" class="text-danger"></span>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="PurchaseDate">Категория</label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="PurchaseDate" readonly="readonly" class="form-control" />
+                </div>
+                <span asp-validation-for="PurchaseDate" class="text-danger"></span>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="ContractDate">Изработка</label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="ContractDate" readonly="readonly" class="form-control" />
+                </div>
+                <span asp-validation-for="ContractDate" class="text-danger"></span>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="ReSignContractDate">Наличен</label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="ReSignContractDate" disabled="disabled" class="form-control" />
+                </div>
+                <span asp-validation-for="ReSignContractDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <h3>Желаете ли да изтриете този продукт?</h3>
+                <input type="submit" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger" value="Изтрий" />
+                <a asp-action="Index" class="btn btn-success">Обратно към списъка</a>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+

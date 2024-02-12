@@ -1,0 +1,92 @@
+﻿@using FiscoPortal.Models;
+@model IEnumerable<FiscalPrinter>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col-6">
+        <h2 class="text-primary">Списък с фискални устройства</h2>
+    </div>
+    <div class="col-6 text-right">
+        <a asp-action="Create" class="btn btn-primary"><i class="fas fa-plus"></i>&nbsp; Добавяне на нов продукт</a>
+    </div>
+
+</div>
+<br />
+<div>
+    <table class="table table-striped border" id="myTable">
+        <thead>
+            <tr class="fisco-table-primary">
+                <th>
+                    Категория
+                </th>
+                <th>
+                    Марка
+                </th>
+                <th>
+                    Модел
+                </th>
+                <th>
+                    Дата на закупуване
+                </th>
+                <th>
+                    Дата на договора
+                </th>
+                <th>
+                    Дата за подновяване
+                </th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+             @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Category</td>
+                    <td>@item.Brand</td>
+                    <td>@item.Model</td>
+                    <td>@item.PurchaseDate</td>
+                    <td>@item.ContractDate</td>
+                    <td>@item.ReSignContractDate</td>
+                    <td>
+                        <partial name="_ButtonPartial" model="@item.Id" />
+                    </td>
+                </tr>
+            }
+            
+        </tbody>
+
+    </table>
+</div>
+
+@section scripts {
+    <script src="~/alertifyjs/alertify.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#myTable').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'pageLength', 'copy', 'csv', 'excel', 'pdf', 'print'
+                ]
+            });
+        });
+        $(function () {
+            var save = '@TempData["save"]'
+            if (save != '') {
+                alertify.success(save);
+            }
+            var edit = '@TempData["edit"]'
+            if (edit != '') {
+                alertify.success(edit);
+            }
+            var del = '@TempData["delete"]'
+            if (del != '') {
+                alertify.error(del);
+            }
+        })
+    </script>
+}
