@@ -32,18 +32,25 @@ namespace FiscoPortal.Data.Migrations
 
                     b.Property<string>("Brand")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
-                    b.Property<string>("Category")
+                    b.Property<string>("Client")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<DateTime>("ContractDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("FiscalPrinterNumber")
+                        .HasMaxLength(10)
+                        .HasColumnType("int");
+
                     b.Property<string>("Model")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<DateTime>("PurchaseDate")
                         .HasColumnType("datetime2");

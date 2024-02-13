@@ -19,13 +19,16 @@
         <thead>
             <tr class="fisco-table-primary">
                 <th>
-                    Категория
+                    Номер на устройство 
                 </th>
                 <th>
                     Марка
                 </th>
                 <th>
                     Модел
+                </th>
+                <th>
+                    Клиент
                 </th>
                 <th>
                     Дата на закупуване
@@ -45,12 +48,13 @@
              @foreach (var item in Model)
             {
                 <tr>
-                    <td>@item.Category</td>
+                    <td>@item.FiscalPrinterNumber.ToString()</td>
                     <td>@item.Brand</td>
                     <td>@item.Model</td>
-                    <td>@item.PurchaseDate</td>
-                    <td>@item.ContractDate</td>
-                    <td>@item.ReSignContractDate</td>
+                    <td>@item.Client</td>
+                    <td>@item.PurchaseDate.Date.ToString("dd.MM.yyy.г")</td>
+                    <td>@item.ContractDate.Date.ToString("dd.MM.yyy.г")</td>
+                    <td>@item.ReSignContractDate.Date.ToString("dd.MM.yyy.г")</td>
                     <td>
                         <partial name="_ButtonPartial" model="@item.Id" />
                     </td>
