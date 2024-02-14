@@ -23,6 +23,44 @@
     <None Include="wwwroot\alertifyjs\alertify.min.js" />
     <None Include="wwwroot\css\sb-admin-2.css" />
     <None Include="wwwroot\css\sb-admin-2.min.css" />
+    <None Include="wwwroot\DataTables-1.13.10\js\dataTables.bootstrap.js" />
+    <None Include="wwwroot\DataTables-1.13.10\js\dataTables.bootstrap.min.js" />
+    <None Include="wwwroot\DataTables-1.13.10\js\dataTables.bootstrap4.js" />
+    <None Include="wwwroot\DataTables-1.13.10\js\dataTables.bootstrap4.min.js" />
+    <None Include="wwwroot\DataTables-1.13.10\js\dataTables.bootstrap5.js" />
+    <None Include="wwwroot\DataTables-1.13.10\js\dataTables.bootstrap5.min.js" />
+    <None Include="wwwroot\DataTables-1.13.10\js\dataTables.bulma.js" />
+    <None Include="wwwroot\DataTables-1.13.10\js\dataTables.bulma.min.js" />
+    <None Include="wwwroot\DataTables-1.13.10\js\dataTables.dataTables.js" />
+    <None Include="wwwroot\DataTables-1.13.10\js\dataTables.dataTables.min.js" />
+    <None Include="wwwroot\DataTables-1.13.10\js\dataTables.foundation.js" />
+    <None Include="wwwroot\DataTables-1.13.10\js\dataTables.foundation.min.js" />
+    <None Include="wwwroot\DataTables-1.13.10\js\dataTables.jqueryui.js" />
+    <None Include="wwwroot\DataTables-1.13.10\js\dataTables.jqueryui.min.js" />
+    <None Include="wwwroot\DataTables-1.13.10\js\dataTables.semanticui.js" />
+    <None Include="wwwroot\DataTables-1.13.10\js\dataTables.semanticui.min.js" />
+    <None Include="wwwroot\DataTables-1.13.10\js\jquery.dataTables.js" />
+    <None Include="wwwroot\DataTables-1.13.10\js\jquery.dataTables.min.js" />
+    <None Include="wwwroot\DataTables\DataTables-1.13.10\js\dataTables.bootstrap.js" />
+    <None Include="wwwroot\DataTables\DataTables-1.13.10\js\dataTables.bootstrap.min.js" />
+    <None Include="wwwroot\DataTables\DataTables-1.13.10\js\dataTables.bootstrap4.js" />
+    <None Include="wwwroot\DataTables\DataTables-1.13.10\js\dataTables.bootstrap4.min.js" />
+    <None Include="wwwroot\DataTables\DataTables-1.13.10\js\dataTables.bootstrap5.js" />
+    <None Include="wwwroot\DataTables\DataTables-1.13.10\js\dataTables.bootstrap5.min.js" />
+    <None Include="wwwroot\DataTables\DataTables-1.13.10\js\dataTables.bulma.js" />
+    <None Include="wwwroot\DataTables\DataTables-1.13.10\js\dataTables.bulma.min.js" />
+    <None Include="wwwroot\DataTables\DataTables-1.13.10\js\dataTables.dataTables.js" />
+    <None Include="wwwroot\DataTables\DataTables-1.13.10\js\dataTables.dataTables.min.js" />
+    <None Include="wwwroot\DataTables\DataTables-1.13.10\js\dataTables.foundation.js" />
+    <None Include="wwwroot\DataTables\DataTables-1.13.10\js\dataTables.foundation.min.js" />
+    <None Include="wwwroot\DataTables\DataTables-1.13.10\js\dataTables.jqueryui.js" />
+    <None Include="wwwroot\DataTables\DataTables-1.13.10\js\dataTables.jqueryui.min.js" />
+    <None Include="wwwroot\DataTables\DataTables-1.13.10\js\dataTables.semanticui.js" />
+    <None Include="wwwroot\DataTables\DataTables-1.13.10\js\dataTables.semanticui.min.js" />
+    <None Include="wwwroot\DataTables\DataTables-1.13.10\js\jquery.dataTables.js" />
+    <None Include="wwwroot\DataTables\DataTables-1.13.10\js\jquery.dataTables.min.js" />
+    <None Include="wwwroot\DataTables\datatables.js" />
+    <None Include="wwwroot\DataTables\datatables.min.js" />
     <None Include="wwwroot\img\undraw_posting_photo.svg" />
     <None Include="wwwroot\img\undraw_profile.svg" />
     <None Include="wwwroot\img\undraw_profile_1.svg" />
@@ -1861,6 +1899,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="7.0.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.13" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\Migrations\" />
   </ItemGroup>
 
 </Project>

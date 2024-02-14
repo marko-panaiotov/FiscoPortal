@@ -3,17 +3,20 @@ using System.ComponentModel.DataAnnotations;
 
 namespace FiscoPortal.Models
 {
+    [Table("FiscalPrinter")]
     public class FiscalPrinter
     {
         [Key]
         public int Id { get; set; }
 
         [Required]
-        public int FiscalPrinterNumber { get; set; }
+        [MinLength(8)]
+        [MaxLength(8)]
+        public string FiscalPrinterNumber { get; set; }
 
         [Required]
         [StringLength(30, MinimumLength = 3)]
-        public string Brand { get; set; }
+        public string Мanufacturer { get; set; }
 
         [Required]
         [StringLength(30, MinimumLength = 3)]

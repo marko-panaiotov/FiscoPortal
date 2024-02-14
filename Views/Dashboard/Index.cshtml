@@ -22,7 +22,7 @@
                     Номер на устройство 
                 </th>
                 <th>
-                    Марка
+                    Производител
                 </th>
                 <th>
                     Модел
@@ -49,7 +49,7 @@
             {
                 <tr>
                     <td>@item.FiscalPrinterNumber.ToString()</td>
-                    <td>@item.Brand</td>
+                    <td>@item.Мanufacturer</td>
                     <td>@item.Model</td>
                     <td>@item.Client</td>
                     <td>@item.PurchaseDate.Date.ToString("dd.MM.yyy.г")</td>
@@ -68,6 +68,11 @@
 
 @section scripts {
     <script src="~/alertifyjs/alertify.min.js"></script>
+    <script src="~/DataTables/datatables.min.js"></script>
+    <script src="https://cdn.datatables.net/v/dt/dt-1.13.10/b-2.4.2/b-html5-2.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/v/dt/jszip-3.10.1/dt-1.13.10/b-2.4.2/b-html5-2.4.2/b-print-2.4.2/datatables.min.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function () {
