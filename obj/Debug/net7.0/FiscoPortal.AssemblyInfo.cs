@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FiscoPortal")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d379e0cd87580866215b21365e8c60676862cb9b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+add758c9921e1c8372b1415103502856258f19f9")]
 [assembly: System.Reflection.AssemblyProductAttribute("FiscoPortal")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FiscoPortal")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
